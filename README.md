@@ -1,16 +1,15 @@
-# React + Vite
+# Copyflow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Copyflow is a small React app for saving, searching, and organizing reusable code snippets.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm install
+npm run dev
+```
 
-## React Compiler
+## Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Vercel:** use the Vite preset, `npm run build` as the build command, and `dist` as the output directory. Vite uses `/` as the asset base.
+- **GitHub Pages:** in the repository's **Settings > Pages**, set the build and deployment source to **GitHub Actions**. The deploy workflow builds with the `/copy-flow/` base path and publishes `dist`.
